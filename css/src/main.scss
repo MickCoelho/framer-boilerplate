@@ -1,0 +1,49 @@
+body, html{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 22px;
+  -webkit-backdrop-filter: blur(10px);
+}
+div{
+    color: #000000;
+}
+
+div[name="menu-item"] {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    div{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .menu-link{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+div[name="menu-bar"] {
+    margin: 0;
+    padding: 0;
+    font-size: 1.6em;
+    div{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
