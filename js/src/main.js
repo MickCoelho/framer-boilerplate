@@ -15,7 +15,6 @@ import LandingSection from './section/LandingSection';
 import AboutSection from './section/AboutSection';
 
 
-
 export default class App {
     constructor(){
 
@@ -26,9 +25,19 @@ export default class App {
 
         this.initMenu();
 
+        this.framework.router.onURL = this.onURL;
         this.onResize( null );
         window.addEventListener('resize', (event)=> this.onResize(event) );
 
+        window.addEventListener('hashchange', (event)=> this.onURL(event) );
+        this.onURL(null);
+    }
+
+    onURL(){
+        var hash = (window || this).location.href.match(/#(.*)$/) ;
+        hash = hash ? hash[1] : '!/';
+        hash = hash.split('!')[1];
+        utils.menu.updateMenu( hash );
     }
 
     initBigwheel(){
@@ -49,14 +58,14 @@ export default class App {
 		utils.mainLayer.states.add({
 		    menuClosed:{
                 brightness: 100,
-                blur: 0,
+                // blur: 0,
                 x: 0
 			}
 		});
 		utils.mainLayer.states.add({
 		    menuOpened:{
                 brightness: 50,
-                blur: 1,
+                // blur: 1,
                 x: 100
 			}
 		});
@@ -67,7 +76,7 @@ export default class App {
 		};
 		utils.mainLayer.states.switchInstant('menuClosed');
         this.background = new BackgroundLayer({
-          backgroundColor: '#ffffff'
+            backgroundColor: '#ffffff'
         });
     }
 

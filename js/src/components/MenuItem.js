@@ -18,6 +18,7 @@ class MenuItem extends Layer{
 		};
 		super(params);
 		this.route = route;
+		this.routeParams = routeParams;
         this.on(Events.Tap, (event) => this.onTapRoute(event));
 	}
 
@@ -25,6 +26,14 @@ class MenuItem extends Layer{
 		utils.menu.toggleMenu();
 		utils.framework.go(this.route);
     }
+
+	select(value){
+		if(value){
+			this.html = '<p class="menu-link selected">' + this.routeParams.name + '</p>';
+		}else{
+			this.html = '<p class="menu-link">' + this.routeParams.name + '</p>';
+		}
+	}
 }
 
 module.exports = MenuItem

@@ -13,6 +13,9 @@ body, html{
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
 }
+*{
+    user-select: none;
+}
 div{
     color: #000000;
 }
@@ -45,14 +48,14 @@ div[name="menu-item"] {
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #aeaeae;
-        &.selected{
-            color: #ffffff;
-        }
+        color: #9a9a9a;
     }
     .menu-link{
         text-align: center;
         margin: 0;
         padding: 0;
+        &.selected{
+            color: #ffffff;
+        }
     }
 }

@@ -60,20 +60,31 @@ class Menu extends Layer{
 		}
 	}
 	initMenuRoutes(){
+		this.menuItems = [];
 		for (var key of Object.keys(utils.framework.routes) ) {
 			var route = utils.framework.routes[key];
 			if(route.params){
 				let menuItem = new MenuItem(key, route.params);
 				this.addChild( menuItem );
+				this.menuItems.push( menuItem );
 			}
 		}
 	}
-
 
 	initMenuBar(){
 		utils.menuBar = new MenuBar();
         utils.menuBar.on(Events.MouseDown, (event) => this.toggleMenu(event) );
 		utils.mainLayer.addChild(utils.menuBar);
+	}
+
+	updateMenu(hash){
+		for (var menuItem of this.menuItems) {
+			if( menuItem.route === hash){
+				menuItem.select(true);
+			}else{
+				menuItem.select(false);
+			}
+		}
 	}
 }
 
