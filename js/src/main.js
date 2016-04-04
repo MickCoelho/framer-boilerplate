@@ -11,8 +11,10 @@ import utils from './utils';
 import BigWheel from 'bigwheel';
 import Menu from './components/Menu';
 
-import LandingSection from './section/LandingSection';
-import AboutSection from './section/AboutSection';
+import CarouselSection from './section/CarouselSection';
+import AnimateSection from './section/AnimateSection';
+import StatesSection from './section/StatesSection';
+import SwitchSection from './section/SwitchSection';
 
 
 export default class App {
@@ -47,8 +49,10 @@ export default class App {
                 autoResize: true,
                 pushState: false,
                 overlap: true,
-                '/': new LandingSection({name: 'landing', backgroundColor: '#fefefe'}),
-                '/about': new AboutSection({name: 'about', backgroundColor: '#cacaca'})
+                '/': new CarouselSection({name: 'carousel', backgroundColor: '#fefefe'}),
+                '/animate': new AnimateSection({name: 'animation', backgroundColor: '#fefefe'}),
+                '/states': new StatesSection({name: 'states', backgroundColor: '#fefefe'}),
+                '/switch': new SwitchSection({name: 'switch', backgroundColor: '#fefefe'}),
             }
         };
     }
