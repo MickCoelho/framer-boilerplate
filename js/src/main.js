@@ -9,10 +9,8 @@
 
 import utils from './utils';
 import BigWheel from 'bigwheel';
-import BigWheelRouter from 'bw-router';
 import Menu from './components/Menu';
 
-import SectionBase from './section/SectionBase';
 import LandingSection from './section/LandingSection';
 import AboutSection from './section/AboutSection';
 
