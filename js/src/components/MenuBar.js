@@ -6,8 +6,8 @@ class MenuBar extends Layer{
 		var params = {
 			name: 'menu-bar',
 			width: window.innerWidth,
-			height: 100,
-			backgroundColor: '#9a9a9a',
+			height: 60,
+			backgroundColor: '#112b3c',
 			html: '<p >' + utils.appTitle + utils.currentRoute + '</p>'
 		};
 		super(params);

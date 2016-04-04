@@ -14,12 +14,14 @@ import Menu from './components/Menu';
 import LandingSection from './section/LandingSection';
 import AboutSection from './section/AboutSection';
 
+
+
 export default class App {
-    constructor(options){
+    constructor(){
 
         this.initMain();
 
-        this.framework = BigWheel( ()=> this.initBigwheel() );
+        this.framework = new BigWheel( ()=> this.initBigwheel() );
         this.framework.init();
 
         this.initMenu();
@@ -43,19 +45,21 @@ export default class App {
     }
 
     initMain(){
-        utils.mainLayer = new Layer({backgroundColor: 'transparent'});
+        utils.mainLayer = new Layer({ backgroundColor: 'transparent' });
 		utils.mainLayer.states.add({
 		    menuClosed:{
                 brightness: 100,
+                blur: 0,
                 x: 0
 			}
-		})
+		});
 		utils.mainLayer.states.add({
 		    menuOpened:{
                 brightness: 50,
+                blur: 1,
                 x: 100
 			}
-		})
+		});
 		utils.viewContainer = new Layer({ backgroundColor: 'transparent' });
     	utils.mainLayer.addChild( utils.viewContainer  );
 		utils.mainLayer.states.animationOptions = {
@@ -71,7 +75,7 @@ export default class App {
         utils.menu = new Menu();
     }
 
-    onResize(event){
+    onResize(){
         this.background.width = window.innerWidth;
     }
 }

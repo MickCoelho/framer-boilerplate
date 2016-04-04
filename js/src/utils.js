@@ -5,8 +5,8 @@ const utils = {
 	viewContainer: {},
 	menu: {},
 	menuBar: {},
-	appTitle: "+rehabstudio - ",
-	currentRoute: "interaction examples"
+	appTitle: "Framer",
+	currentRoute: ""
 }
 
 export default utils

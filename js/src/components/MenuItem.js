@@ -3,7 +3,7 @@ import utils from '../utils';
 class MenuItem extends Layer{
 
 	constructor(route, routeParams) {
-		var margin = 10;
+		var margin = 1;
 		var y = utils.menu.contentFrame().height + margin;
 		if(y > margin ){
 			y += margin;
@@ -11,7 +11,7 @@ class MenuItem extends Layer{
 		var params = {
 			name: 'menu-item',
 			width: utils.menu.width,
-			height: 80,
+			height: 60,
 			y: y,
 			backgroundColor: 'rgba(255, 255, 255, 0.05)',
 			html: '<p class="menu-link">' + routeParams.name + '</p>'

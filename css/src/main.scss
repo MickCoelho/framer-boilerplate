@@ -7,18 +7,37 @@ body, html{
   position: absolute;
   top: 0;
   left: 0;
-  font-size: 22px;
+  font-size: 16px;
   -webkit-backdrop-filter: blur(10px);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 div{
     color: #000000;
+}
+
+
+div[name="menu-bar"] {
+    margin: 0;
+    padding: 0;
+    font-size: 1.1em;
+    div{
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+    }
 }
 
 div[name="menu-item"] {
     cursor: pointer;
     margin: 0;
     padding: 0;
-    font-size: 1.5em;
+    font-size: 1em;
     div{
         height: 100%;
         margin: 0;
@@ -26,24 +45,14 @@ div[name="menu-item"] {
         display: flex;
         align-items: center;
         justify-content: center;
+        color: #aeaeae;
+        &.selected{
+            color: #ffffff;
+        }
     }
     .menu-link{
         text-align: center;
         margin: 0;
         padding: 0;
-    }
-}
-
-div[name="menu-bar"] {
-    margin: 0;
-    padding: 0;
-    font-size: 1.6em;
-    div{
-        height: 100%;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
     }
 }

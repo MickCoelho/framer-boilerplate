@@ -9,7 +9,7 @@ class Menu extends Layer{
 			name: 'menu',
 			width: 300,
 			height: 0,
-			backgroundColor: '#ffffff',
+			backgroundColor: '#112b3c',
 			shadowX: 5,
 			shadowBlur: 8,
 			shadowColor : 'rgba(0,0,0,0.14)'
@@ -27,7 +27,7 @@ class Menu extends Layer{
 		this.background = new Layer({
 			width: this.width,
 			height: window.innerHeight,
-			backgroundColor: '#898989'
+			backgroundColor: '#1b394e'
 		});
 		this.addChild( this.background );
 		this.background.sendToBack();
