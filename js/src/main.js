@@ -15,7 +15,6 @@ import CarouselSection from './section/CarouselSection';
 import AnimateSection from './section/AnimateSection';
 import StatesSection from './section/StatesSection';
 import DragSection from './section/DragSection';
-import SwitchSection from './section/SwitchSection';
 
 
 export default class App {
@@ -56,7 +55,6 @@ export default class App {
                 '/states': new StatesSection({name: 'states', backgroundColor: '#fefefe'}),
                 '/carousel': new CarouselSection({name: 'carousel', backgroundColor: '#fefefe'}),
                 '/draggable': new DragSection({name: 'draggable', backgroundColor: '#fefefe'}),
-                '/switch': new SwitchSection({name: 'switch', backgroundColor: '#fefefe'}),
             }
         };
     }
