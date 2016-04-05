@@ -1,5 +1,4 @@
 
-import RippleButton from '../components/RippleButton';
 import SectionBase from './SectionBase';
 
 class Section extends SectionBase{
