@@ -47,6 +47,7 @@ class Carousel extends SectionBase{
 			});
 		}
 	}
+	
     onPageChange(event){
 		 this.page.previousPage.animate({
 			properties: {

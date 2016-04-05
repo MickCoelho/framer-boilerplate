@@ -25,9 +25,6 @@ class SectionBase{
 	}
 
 
-	onClickButton(event){
-		utils.framework.go('/');
-	}
 
 	animateIn(req, done) {
 		this.layer.animate({
