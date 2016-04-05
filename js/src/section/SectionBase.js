@@ -9,7 +9,8 @@ class SectionBase{
 		var params = {
 			name: (layerOpt.name) ? layerOpt.name : '',
 			width: (layerOpt.width) ? layerOpt.width : window.innerWidth,
-			height: (layerOpt.height) ? layerOpt.height : window.innerHeight,
+			height: (layerOpt.height) ? layerOpt.height : (window.innerHeight - 60),
+			y: 30,
 			backgroundColor: (layerOpt.backgroundColor) ? layerOpt.backgroundColor : '#f0f0f0'
         }
 		this.params = params;
