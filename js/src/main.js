@@ -14,12 +14,15 @@ import Menu from './components/Menu';
 import CarouselSection from './section/CarouselSection';
 import AnimateSection from './section/AnimateSection';
 import StatesSection from './section/StatesSection';
+import DragSection from './section/DragSection';
 import SwitchSection from './section/SwitchSection';
 
 
 export default class App {
     constructor(){
-
+        document.ontouchmove = function(event){
+            event.preventDefault();
+        }
         this.initMain();
 
         this.framework = new BigWheel( ()=> this.initBigwheel() );
@@ -49,9 +52,10 @@ export default class App {
                 autoResize: true,
                 pushState: false,
                 overlap: true,
-                '/': new CarouselSection({name: 'carousel', backgroundColor: '#fefefe'}),
-                '/animate': new AnimateSection({name: 'animation', backgroundColor: '#fefefe'}),
+                '/': new AnimateSection({name: 'animation', backgroundColor: '#fefefe'}),
                 '/states': new StatesSection({name: 'states', backgroundColor: '#fefefe'}),
+                '/carousel': new CarouselSection({name: 'carousel', backgroundColor: '#fefefe'}),
+                '/draggable': new DragSection({name: 'draggable', backgroundColor: '#fefefe'}),
                 '/switch': new SwitchSection({name: 'switch', backgroundColor: '#fefefe'}),
             }
         };

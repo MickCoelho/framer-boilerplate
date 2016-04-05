@@ -37,8 +37,8 @@ class Carousel extends SectionBase{
 		this.switch.draggable.constraints = this.constraints;
 
 		this.switch.draggable.momentumOptions = {
-		    friction: 20.1,
-		    tolerance: 0.1
+		    friction: 4,
+		    tolerance: 2
 		};
 		this.switch.draggable.vertical = false;
 	}

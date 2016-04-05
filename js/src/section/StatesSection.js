@@ -13,8 +13,6 @@ class States extends SectionBase{
 		super.init(req, done);
 
 
-
-
 		this.shapeA = new Layer({
 			backgroundColor: '#112b3c',
 			borderRadius: 4

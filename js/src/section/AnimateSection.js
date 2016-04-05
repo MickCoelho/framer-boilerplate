@@ -34,8 +34,6 @@ class Animate extends SectionBase{
 		this.shapeA.x -= 90;
 		this.shapeB.x += 90;
 
-
-
 		this.shapeA.animate({
 			properties: {
 				rotation: 90
